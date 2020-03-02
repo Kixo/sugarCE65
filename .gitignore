@@ -1,0 +1,5 @@
+# Ignore cache folder as per request
+cache/*
+
+# PHP Storm
+.idea
