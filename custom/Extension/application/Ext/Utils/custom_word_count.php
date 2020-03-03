@@ -11,7 +11,7 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 function wordCount($string = '')
 {
 	// If it is not string or if the string is empty we will just return 0
-	if (!is_string($string) || empty($string))
+	if (!is_string($string) || trim($string) == '')
 	{
 		return 0;
 	}
@@ -21,7 +21,7 @@ function wordCount($string = '')
 	$filteredString = trim(preg_replace($pattern, " ", $string));
 
 	// After filtering maybe there is no actual word in the string so we just return 0. Ex: " "
-	if (empty($filteredString))
+	if ($filteredString == '')
 	{
 		return 0;
 	}
